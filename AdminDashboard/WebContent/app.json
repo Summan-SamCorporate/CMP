@@ -12,7 +12,7 @@
     /**
      * The relative path to the application's markup file (html, jsp, asp, etc.).
      */
-    "indexHtmlPath": "index.html",
+    "indexHtmlPath": "index.jsp",
 
     /**
      * The list of directories or files to search for classes.
@@ -53,7 +53,8 @@
         "exporter",
         "charts",
         "font-awesome",
-        "ux"
+        "ux",
+        "pivot"
     ],
 
     /**
@@ -361,7 +362,7 @@
      *      {
      *          "base": "${workspace.build.dir}/${build.environment}/${app.name}",
      *          "page": {
-     *              "path": "../index.html",
+     *              "path": "../index.jsp",
      *              "enable": false
      *          },
      *          "css": "${app.output.resources}/${app.name}-all.css",
@@ -383,7 +384,7 @@
      *          },
      *          // Setting the "enable" property of this object to a Truthy value will cause a Application Cache
      *          // manifest file to be generated based on this files appCache object. This file will then be injected
-     *          // into the index.html file of the built application
+     *          // into the index.jsp file of the built application
      *          "appCache":{
      *              "enable": false"
      *          }
@@ -392,7 +393,7 @@
      */
     /* "output": {
         "base": "${ext.dir}/build/examples/admin-dashboard/${build.id}",
-        "page": "../index.html",
+        "page": "../index.jsp",
         "manifest": "../${build.id}.json",
         "appCache": {
             "enable": false
@@ -400,7 +401,7 @@
     }, */
     "output": {
 		"base": "${workspace.build.dir}/${build.environment}/${app.name}",
-		"page": "index.html",
+		"page": "index.jsp",
 		"manifest": "${build.id}.json",
 		"js": "${build.id}/app.js",
 		"appCache": {
@@ -441,7 +442,7 @@
          * List of items in the CACHE MANIFEST section
          */
         "cache": [
-            "index.html"
+            "index.jsp"
         ],
         /**
          * List of items in the NETWORK section
@@ -528,7 +529,7 @@
     /**
      * Build Profiles. This object's properties are each a "build profile". You can
      * add as many as you need to produce optimized builds for devices, themes, locales
-     * or other criteria. Your "Ext.beforeLoad" hook (see index.html) is responsible for
+     * or other criteria. Your "Ext.beforeLoad" hook (see index.jsp) is responsible for
      * selecting the desired build profile by setting "Ext.manifest" to one of these
      * names.
      *

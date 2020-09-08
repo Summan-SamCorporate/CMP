@@ -20,40 +20,30 @@ Ext.define('Admin.store.NavigationTree', {
             },
             {
                 text: 'System Configuration',
-             //   iconCls: 'x-fa fa-paper-plane',
-               // rowCls: 'nav-tree-badge nav-tree-badge-hot',
-              //  viewType: 'profile',
                 expanded: false,
-                                selectable: false,
-
-                                children: [
-                                    {
-                                    text: 'General Configuration',
-                                     // iconCls: 'x-fa fa-file',
-                                     viewType: 'pageblank',
-                                     leaf: true
-                                    },{
-                                        text: 'Model Management',
-                                       // iconCls: 'x-fa fa-file',
-                                        viewType: 'modelslist',
-                                        leaf: true
-                                    },
-
-                                    {
-                                        text: 'User Management',
-                                      //  iconCls: 'x-fa fa-exclamation-triangle',
-                                        viewType: 'userslist',
-                                        leaf: true
-                                    },
-                                    {
-                                        text: 'Roles Management',
-                                        //iconCls: 'x-fa fa-times-circle',
+                selectable: false,
+                children: [
+                        {
+                            text: 'General Configuration',
+                            viewType: 'pageblank',
+                            leaf: true
+                         },{
+                            text: 'Model Management',
+                            viewType: 'modelslist',
+                            leaf: true
+                            },
+                            {
+                            text: 'User Management',
+                            viewType: 'userslist',
+                            leaf: true
+                            },
+                            {
+                            text: 'Roles Management',
                                         viewType: 'roleslist',
                                         leaf: true
                                     },
                                     {
                                         text: 'Other Configurations',
-                                      //  iconCls: 'x-fa fa-lock',
                                         viewType: 'lockscreen',
                                         expanded: false,
                                         selectable: false,
@@ -61,48 +51,38 @@ Ext.define('Admin.store.NavigationTree', {
                                                         children: [
                                                             {
                                                                 text: 'User Status Master',
-                                                                //iconCls: 'x-fa fa-file',
                                                                 viewType: 'userstatuslist',
                                                                 leaf: true
                                                             },
 
                                                             {
                                                                 text: 'Application Status Master',
-                                                               // iconCls: 'x-fa fa-exclamation-triangle',
                                                                 viewType: 'applicationstatuslist',
                                                                 leaf: true
                                                             },
                                                             {
                                                                 text: 'Account Nature',
-                                                                //iconCls: 'x-fa fa-times-circle',
                                                                 viewType: 'accountnaturelist',
                                                                 leaf: true
                                                             },
                                                             {
                                                                 text: 'Account Type',
-                                                              //  iconCls: 'x-fa fa-lock',
                                                                 viewType: 'accounttypelist',
                                                                 leaf: true
                                                             },
 
                                                             {
                                                                 text: 'Account Version',
-                                                              //  iconCls: 'x-fa fa-check',
-                                                                //viewType: 'login',
                                                                 viewType: 'accountversionlist',
                                                                 leaf: true
                                                             },
                                                             {
                                                                 text: 'Scenario Version',
-                                                                //iconCls: 'x-fa fa-edit',
-                                                               // viewType: 'register',
                                                                 viewType: 'scenarioversionlist',
                                                                 leaf: true
                                                             },
                                                             {
                                                                 text: 'Account Label',
-                                                                //iconCls: 'x-fa fa-lightbulb',
-                                                               // viewType: 'passwordreset',
                                                                 viewType: 'accountlabellist',
                                                                 leaf: true
                                                             }
@@ -111,7 +91,6 @@ Ext.define('Admin.store.NavigationTree', {
 
                                     {
                                         text: 'Query Analyzer',
-                                       // iconCls: 'x-fa fa-check',
                                         viewType: 'login',
                                         leaf: true
                                     }
@@ -119,9 +98,30 @@ Ext.define('Admin.store.NavigationTree', {
             },
             {
                 text: 'Application Configuration',
-              //  iconCls: 'x-fa fa-user',
-                viewType: 'profile',
-                leaf: true
+                expanded: false,
+                selectable: false,
+                children: [
+                    {
+                        text: 'Manage Application',
+                        viewType: 'pageblank',
+                        leaf: true
+                    },
+                    {
+                        text: 'App Configuration',
+                        viewType: 'pageblank',
+                        leaf: true
+                    },
+                    {
+                        text: 'Data Modeling',
+                        viewType: 'pageblank',
+                        leaf: true
+                     },
+                     {
+                        text: 'Financial Statement Template',
+                        viewType: 'pageblank',
+                        leaf: true
+                     },
+                    ]
             },
             {
                 text: 'Data Management',
@@ -131,9 +131,15 @@ Ext.define('Admin.store.NavigationTree', {
             },
             {
                 text: 'Budgeting,Forecasting & Planning',
-               // iconCls: 'x-fa fa-question',
-                viewType: 'faq',
-                leaf: true
+               expanded: false,
+                               selectable: false,
+                               children: [
+                                   {
+                                       text: 'Revenue Planning',
+                                       viewType: 'revenueplanning',
+                                       leaf: true
+                                   },
+                               ]
             },
             {
                 text: 'CMP Generator',
